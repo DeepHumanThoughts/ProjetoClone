@@ -1,0 +1,572 @@
+/* base */
+body{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+.all{
+    width: 100%;
+    overflow-x: hidden;
+}
+.titulo{
+    font-size: 3em;
+    font-weight: bold;
+}
+.sub-titulo{
+    font-size: 1.625em;
+    font-weight: 400;
+}
+legend{
+    display: block;
+    width: fit-content;
+    overflow:visible;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-size: 1.25em;
+    font-weight: 400;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/* base */
+
+
+/* foms */
+.formulario_email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.input-email{
+    display: block;
+    position: relative;
+    width: 75%;
+}
+.formulario_email input{
+
+    padding: 10px 10px 0;
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: solid 1px #8c8c8c;
+    border-radius: 2px;
+    outline: none;
+    color: #000;
+    font-weight: 300;
+}
+.formulario_email input:focus ~ .tag-email,
+.formulario_email input:valid ~ .tag-email{
+    transform: translateY(-200%);
+    font-size: 12px;
+    font-weight: bold;
+}
+/* improviso pela falta de um JS */
+.formulario_email input:invalid{
+    color: #fff;
+}
+.formulario_email input:focus{
+    color: #000;
+}
+/* improviso pela falta de um JS */
+
+.tag-email{
+    position: absolute;
+    font-size: 16px;
+    line-height: 50%;
+    top: 45%;
+    left: 10px;
+    color: #8c8c8c;
+    transition: 0.1s;
+}
+.formulario_email button{
+    display: inline-block;
+    width: 25%;
+    padding: 10px 10px;
+    height: 48px;
+    background-color: #e50914;
+    color: #fff;
+    border: 1px solid #e50914;
+    border-radius: 3px;
+    border-left: none;
+}
+.formulario_email button span{
+    line-height: 70%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: initial;
+}
+/* foms */
+
+
+.cabecalho{
+    position: relative;
+    display: block;
+    height: 100%;
+    margin-bottom: 0.5em;
+}
+.cabecalho_background_container{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.cabecalho_background{  
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: none;
+}
+.cabecalho-gradient{
+    background: linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, .4),rgba(0, 0, 0, .8));
+}
+.espacamento{
+    padding: 70px 45px;
+}
+.cabecalho_topo{
+    z-index: 10;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.cabecalho_topo_logo{
+    flex: 1 1 auto;
+}
+.svg-icon-netflix-logo{
+    fill: #e50914;
+    height: 2.5em;
+    width: 7.75em;
+}
+.cabecalho_topo_info{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.info_lang{
+    margin-right: 35px;
+}
+.info_lang select{
+    font-weight: 700;
+    padding: 0.5em 1em;
+    color: #fff;
+    background-color: black;
+    border: 1px solid #aaa;
+}
+.info_lang option{
+    background-color: darkgrey;
+}
+.cabecalho_topo_info_login button{
+    padding:0.5em 1em;
+    text-decoration: none;
+    background-color: #e50914;
+    padding: 7px 17px;
+    font-size: 1em;
+    border: 1px solid #e50914;
+    border-radius: 3px;
+}
+.cabecalho_topo_info_login button a{
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    line-height: normal;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.cabecalho_principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cabecalho_principal_informativo_container{
+    padding: 75px 0; 
+}
+.cabecalho_principal_informativo{
+    text-align: center;
+}
+.cabecalho_principal_informativo h1{
+    display: block;
+    margin: 0 auto;
+    max-width: 640px;
+}
+.cabecalho_principal_informativo p{
+    display: block;
+    max-width: 640px;
+    margin: 16px auto;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.cabecalho_principal_formulario{
+    text-align: center;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    padding-top: 0.85em;
+}
+
+
+
+.plataformas{
+    background-color: #000;
+    margin-bottom: 0.5em;
+}
+.plataformas-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.plataformas_informacoes{
+    width: 52%;
+    height: 100%;
+    flex: 0 1 auto;
+    padding: 0 3em 0 0;
+    z-index: 3
+}
+.plataformas_informacoes_titulo{
+    margin-bottom: 0.5em;
+}
+.plataformas_informacoes_texto{
+    margin: 0.75em 0 0.25em;
+}
+.plataformas_ilustrativo{
+    position: relative;
+    overflow: hidden;
+}
+.plataformas_ilustrativo_imagem{
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    height: auto;
+}
+.plataformas_ilustrativo_video-container{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.plataformas_ilustrativo_video{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+
+
+.acessibilidade{
+    background-color: #000;
+    margin-bottom: 0.5em;
+}
+.acessibilidade-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.acessibilidade_informacoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 0 3em;
+    width: 52%;
+    flex: 0 1 auto;
+    z-index: 3;
+}
+.acessibilidade_informacoes_titulo{
+    margin-bottom: 0.5em;
+}
+.acessibilidade_ilustrativo{
+    display: flex;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    height: 100%;
+    width: 48%; 
+}
+.acessibilidade_ilustrativo-container{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: -8% 0 -4% -15%;
+    min-height: 100px;
+    width: 100%;
+}
+.acessibilidade_ilustrativo_imagem{
+    max-width: 100%;
+    height: auto;
+    border: 0; 
+}
+.acessibilidade_ilustrativo_animacao{
+    position: absolute;
+    left: 50%;
+    padding: 10px;
+    bottom: 8%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-width: 15em;
+    max-width: 388px;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 2em 0 #000;
+    border-radius: 0.75em;
+}
+.acessibilidade_ilustrativo_animacao_imagem{
+    height: 4.5em;
+    border: 0;
+    max-width: 100%;
+    margin: 0 1em 0 0;
+}
+.acessacessibilidade_ilustrativo_animacao-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 1 auto;
+    margin: 0.3em 0;
+}
+.acessibilidade_ilustrativo_animacao_texto{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+}
+.acessibilidade_ilustrativo_animacao_loading{
+    width: 3em;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    display: block;
+    background:url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    background-size: 100%;
+}
+
+
+
+.dispositivos{
+    background-color: #000;
+    margin-bottom: 0.5em;
+}
+.dispositivos-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.dispositivos_informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 52%;
+    flex: 0 1 auto;
+    padding: 0 3em 0 0;
+    
+}
+.dispositivos_informacoes_titulo{
+    margin-bottom: .5em;
+    
+}
+.dispositivos_ilustrativo{
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    display: flex;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+}
+.dispositivos_ilustrativo img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 0;
+    z-index: 1;
+}
+.dispositivos_ilustrativo_video-container{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
+    transform: translate(-50%,-50%);
+}
+.dispositivos_ilustrativo_video{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+}
+
+
+
+.kids{
+    background-color: #000;
+    margin-bottom: 0.5em;
+}
+.kids-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.kids_informacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: 52%;
+    height: 100%;
+    padding: 0 0 0 3em;
+}
+.kids_informacoes_titulo{
+    margin-bottom: 0.5em;
+}
+.kids_ilustrativo{
+    width: 48%;
+    height: 100%;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+}
+.kids_ilustrativo_imagem{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.perguntas{
+    background-color: #000;
+    margin-bottom: 0.5em;
+}
+.perguntas-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.perguntas_lista{
+    margin: 2em auto;
+    max-width: 815px;
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.perguntas_item{
+    list-style-type: none;
+    margin: 0 0 8px 0;
+    width: 100%;
+}
+.perguntas_pergunta{
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    padding: .8em 2.2em .8em 1.2em;
+    margin-bottom: 1px;
+    width: 100%;
+    background-color: #303030;
+    color: #fff;
+    border: 0;
+}
+.perguntas_respostas{
+    display: block;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: #303030;
+}
+.perguntas_respostas span{
+    text-align: left;
+    display: inline-block;
+    padding: 1.2em;
+}
+.perguntas_pergunta:active ~ .perguntas_respostas{
+    max-height: 1200px;
+}
+.perguntas_formulario-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+
+
+.rodape{
+    position: relative;
+    background-color: #000;
+}
+.rodape-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+    max-width: 90%;
+    margin: 0 auto;
+    align-self: center;
+}
+.rodape_ligue{
+    margin-bottom: 30px;
+    font-size: 1em;
+    color: #757575;
+}
+.rodape_ligue a{
+    text-decoration: none;
+    color: #757575;
+}
+.rodape_instrucoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.rodape_instrucoes_itens{
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 100px;
+    width: 25%;
+    padding-right: 12px;
+    vertical-align: top;
+}
+.rodape_instrucoes_itens a{
+    text-decoration: none;
+    color: #757575;
+    font-size: 13px;
+}
+.rodape_formulario{
+    margin-top: 20px;
+    opacity: 0.5;
+}
+.rodape_pais{
+    margin-top: 24px;
+    font-size: 13px;
+    color: #757575;
+}
